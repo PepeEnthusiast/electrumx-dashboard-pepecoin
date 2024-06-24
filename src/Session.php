@@ -24,6 +24,7 @@ class Session{
 	public $countryCode; // string
 	public $isp; // string
 	public $hosted; // bool
+	public $traffic;
 	
 	function __construct($session) {
 		$this->id = checkInt($session[0]);

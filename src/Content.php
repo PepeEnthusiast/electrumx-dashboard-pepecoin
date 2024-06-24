@@ -26,7 +26,13 @@ function createSessionsContent(){
 	$content['totaltraffic'] = $sessionsData['totaltraffic'];
 	$content['totaltrafficin'] = $sessionsData['totaltrafficin'];
 	$content['totaltrafficout'] = $sessionsData['totaltrafficout'];
-	$content['totaltrafficinper'] = round($sessionsData['totaltrafficin']/$sessionsData['totaltraffic'],2)*100;
+	$totalTraffic = $sessionsData['totaltraffic'];
+	if ($totalTraffic != 0) {
+		$content['totaltrafficinper'] = round($sessionsData['totaltrafficin'] / $totalTraffic, 2) * 100;
+	} else {
+		// Handle the case when $totalTraffic is zero
+		$content['totaltrafficinper'] = 0; // or any other appropriate value or action
+	}
   $content['geo'] = Config::SESSIONS_GEO;
   if(isset($sessionsData['api'])) $content['api'] = $sessionsData['api'];
 
