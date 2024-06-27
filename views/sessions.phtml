@@ -5,7 +5,7 @@
                     <div class="col-md-1 col-sm-4 col-xs-6 tile_stats_count">
                       <span class="count_top"><i class="fa fa-user"></i> Sessions</span>
                       <div class="count"><?= $content['sessionsc'] ?></div>
-                      <span class="count_bottom"><i class="fa fa-plug" style="color:lightblue;"></i><?= $content['details']['subscribersc'] ?> Subs</span>
+                      <span class="count_bottom"><i class="fa fa-plug"></i><?= $content['details']['subscribersc'] ?> Subs</span>
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                       <span class="count_top"><i class="fa fa-lock"></i> SSL Connections</span>
@@ -15,7 +15,7 @@
                     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                       <span class="count_top"><i class="fa fa-cloud"></i> Traffic <?= ($content['totaltraffic'] >= 1000) ? "(GB)" : "(MB)"?></span>
                       <div class="count"><?= ($content['totaltraffic'] >= 1000) ? round($content['totaltraffic']/1000,1)." <small>GB</small>" : round($content['totaltraffic'],1)." <small>MB</small>"?></div>
-                      <span class="count_bottom"><i class="fa fa-cloud-upload" style="color:lightblue;"></i> <?= $content['totaltrafficinper'] ?>% Upload</span>
+                      <span class="count_bottom"><i class="fa fa-cloud-upload"></i> <?= $content['totaltrafficinper'] ?>% Upload</span>
                     </div>
                     <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
                       <span class="count_top"><i class="fa fa-star"></i> Most Popular Client Version</span>
