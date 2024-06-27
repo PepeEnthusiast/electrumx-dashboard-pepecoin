@@ -17,6 +17,11 @@ input {
   color: black;
 }
 
+/* Additional styling for active links in the bottom bar, if needed */
+.bottom_bar a.active {
+  color: #1ABB9C; /* Highlight color for active links */
+}
+
 .daterangepicker .input-mini {
   background-color: #eee;
   border: 1px solid #ccc;
@@ -602,7 +607,7 @@ body {
 
 .main_container .top_nav {
   display: block;
-  margin-left: 230px;
+  margin-left: 250px;
 }
 
 .no-padding {
@@ -933,8 +938,6 @@ a:focus {
   background: transparent;
 }
 
-
-
 .nav.child_menu {
   display: none;
 }
@@ -1170,11 +1173,17 @@ a:focus {
 
 .main_menu_side {
   padding: 0;
+  margin: 0;
 }
 
 .bs-docs-sidebar .nav>li>a {
   display: block;
   padding: 4px 6px;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 footer {
@@ -4749,6 +4758,11 @@ fieldset {
   margin: 0 0 20px;
 }
 
+.table-responsive {
+  min-height: 220px;
+  overflow-x: auto;
+}
+
 .wizard_horizontal ul.wizard_steps li {
   display: table-cell;
   text-align: center;
@@ -5141,3 +5155,56 @@ ul.notifications {
 }
 
 /** /Dropzone.js **/
+
+.bottom_bar {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal alignment */
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensure it's above other content */
+  background-color: #333; /* Example background color for visibility */
+  justify-content: center; /* Center items horizontally */
+  padding: 10px 0; /* Add some padding */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Optional: adds shadow for depth */
+}
+
+.bottom_bar a {
+  display: flex;
+  flex-direction: column; /* Keep text below icons */
+  align-items: center;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: inherit; /* Adjust color as needed */
+}
+
+.bottom_bar a i {
+  font-size: 20px; /* Adjust icon size */
+  margin-bottom: 5px; /* Space between icon and text */
+}
+
+.bottom_bar a span {
+  font-size: 16px; /* Adjust text size */
+}
+
+@media (max-width: 991px) {
+  .bottom_bar {
+    display: flex; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .bottom_bar {
+    display: none;
+    flex-direction: row;
+  }
+}
