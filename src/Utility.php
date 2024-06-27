@@ -451,6 +451,9 @@ function getSessionsGeoData($sessionsRPC){
   $sessionData['newsessionsc'] = $newSessionsC;
   $sessionData['countrylist'] = $countryList;
 
+  // Ensure $arraySessions is defined and initialized
+  $arraySessions = $arraySessions ?? [];
+  
   // Removes all sessions that the node is not connected to anymore.
   foreach($arraySessions as $key => $session){
     if($session[6] == 0){

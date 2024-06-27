@@ -25,6 +25,7 @@ class Session{
 	public $isp; // string
 	public $hosted; // bool
 	public $traffic;
+	public $city;
 	
 	function __construct($session) {
 		$this->id = checkInt($session[0]);
